@@ -101,9 +101,12 @@ def calculer(employe,reduction,rendement_p):  # user is a tuple like (id, name, 
     ind_enfant=0
     ind_enfant10=0
 
-    if (employe[5]=="Marié") and (int(employe[6])==0):
+    if (employe[5]=="Marié avec deux salaires"):
+      ind_s_s=0
+
+    if (employe[5]=="Marié et salaire unique") and (int(employe[6])==0):
       ind_s_s=5.5
-    elif (employe[5]=="Marié") and (int(employe[6])>0):
+    elif (employe[5]=="Marié et salaire unique") and (int(employe[6])>0):
       ind_s_s=800
     
     if (int(employe[6])>0):

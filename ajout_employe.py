@@ -8,7 +8,7 @@ from tkinter import messagebox
  
 def ajout_employe():
  window = tk.Toplevel()
- window.title("ajout d'employe'")
+ window.title("ajout d'employe")
  window.geometry("550x630")
  BG_COLOR = "#D3D3D3" # Light Gray
  FG_COLOR = "black"   # Black
@@ -134,7 +134,7 @@ def ajout_employe():
  selected_poste.trace("w", update_poste_s)  # Only this line binds the update
 
  tk.Label(scrollable_frame, text="Situation familliale :", bg=BG_COLOR, fg=FG_COLOR).grid(row=4, column=0, sticky="e", padx=5, pady=5)
- marie_choix = ["Marié" , "Celibataire"]
+ marie_choix = ["Marié et salaire unique" ,"Marié avec deux salaires", "Celibataire"]
  selected_marie = tk.StringVar(value="Celibataire")
  marie_menu = tk.OptionMenu(scrollable_frame, selected_marie, *marie_choix)
  marie_menu.grid(row=4, column=1, padx=5, pady=5)

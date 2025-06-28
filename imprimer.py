@@ -86,7 +86,10 @@ def imprimer(employe,salaire_base,al_fam,brute1,brute,css,imposable,impots,sal,j
  sal_jrs=sal/30
  salary=sal_jrs*int(jrs)
 
-
+ if (employe[5]=="Marié et salaire unique") or (employe[5]=="Marié avec deux salaires"):
+    sit_fam="Marié"
+ elif (employe[5]=="Celibataire") :
+    sit_fam="Celibataire"   
  context = {
     'name'   : employe[1],
     'name_ind_list': name_ind_list,
@@ -105,7 +108,7 @@ def imprimer(employe,salaire_base,al_fam,brute1,brute,css,imposable,impots,sal,j
     'date_nai': employe[12],
     'enfant': employe[6],
     'enfant10': employe[7],
-    'marie': employe[5],
+    'marie': sit_fam,
     'nom_poste': employe[3], 
     'indda_autre': indda_autre_list, 
     'name_indda_autre': name_indda_autre_list,   
